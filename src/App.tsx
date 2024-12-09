@@ -1,8 +1,15 @@
 import React from 'react'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import AuthForm from './pages/auth/AuthForm'
 
 const App = () => {
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AuthForm />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
