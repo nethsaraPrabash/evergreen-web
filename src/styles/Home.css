@@ -1,0 +1,6 @@
+.navhold {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 37rem;
+}

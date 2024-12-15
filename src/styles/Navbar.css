@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+.nav-theme {
+  position: relative;
+  background: rgb(216, 213, 213);
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 10 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent; /* Transparent because `nav-theme` handles the background */
+  color: #000; /* Dark text */
+  padding: 0 2rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.navbar-menu {
+  position: relative;
+  display: flex;
+}
+
+.navbar-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  height: calc(1rem * 3.5);
+  width: 10rem;
+  color: #000; /* Dark text for links */
+  transition: 250ms ease all;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar-link svg {
+    transition: 500ms ease all;
+}
+
+.navbar-link:hover svg {
+    stroke: #28a745; /* Green color for hover effect */
+}
+
+/* Optional: Add hover effect for text color */
+.navbar-link:hover {
+  color: #28a745; /* Green text on hover */
+}
