@@ -24,16 +24,13 @@ const Navbar = () => {
         <a href="#" className="navbar-link"><i data-feather="home"></i><span>Home</span> </a>
       </li>
       <li className="navbar-item">
-        <a href="#" className="navbar-link"><i data-feather="message-square"></i><span>Messages</span></a>        
+        <a href="#" className="navbar-link"><i data-feather="droplet"></i><span>Payments</span></a>        
       </li>
       <li className="navbar-item">
-        <a href="#" className="navbar-link"><i data-feather="users"></i><span>Customers</span></a>        
+        <a href="#" className="navbar-link"><i data-feather="users"></i><span>Fertilizer</span></a>        
       </li>
       <li className="navbar-item">
-        <a href="#" className="navbar-link"><i data-feather="folder"></i><span>Projects</span></a>        
-      </li>
-      <li className="navbar-item">
-        <a href="#" className="navbar-link"><i data-feather="archive"></i><span>Resources</span></a>        
+        <a href="#" className="navbar-link"><i data-feather="users"></i><span>Admins</span></a>        
       </li>
       <li className="navbar-item">
         <a href="#" className="navbar-link"><i data-feather="help-circle"></i><span>Help</span></a>        
