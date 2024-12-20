@@ -1,31 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-
 .nav-theme {
-  position: relative;
+  position: relative; /* Keeps the navbar within the flow of the page */
   background: rgb(216, 213, 213);
   border-radius: 12px; /* Rounded corners */
-  box-shadow: 10 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.15); /* Fixed the box-shadow values */
   overflow: hidden;
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
+  z-index: 1000; /* Ensures navbar stays above other content */
 }
 
 .header {
-  position: sticky;
+  position: fixed; /* Makes the navbar static at the top */
   top: 0;
   left: 0;
   right: 0;
-  background: transparent; /* Transparent because `nav-theme` handles the background */
+  background: rgb(216, 213, 213); /* Matches the nav-theme background */
   color: #000; /* Dark text */
   padding: 0 2rem;
   height: 6rem;
   display: flex;
   align-items: center;
   gap: 3rem;
+  z-index: 1000; /* Ensures the header stays on top */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Optional: subtle border for separation */
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
 }
 
 .navbar {
@@ -57,11 +58,11 @@
 }
 
 .navbar-link svg {
-    transition: 500ms ease all;
+  transition: 500ms ease all;
 }
 
 .navbar-link:hover svg {
-    stroke: #28a745; /* Green color for hover effect */
+  stroke: #28a745; /* Green color for hover effect */
 }
 
 /* Optional: Add hover effect for text color */
