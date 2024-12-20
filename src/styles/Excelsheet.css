@@ -1,0 +1,30 @@
+.spreadsheet-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .scroll-wrapper {
+    display: inline-block;
+    min-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  
+  .spreadsheet-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .spreadsheet-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .spreadsheet-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
