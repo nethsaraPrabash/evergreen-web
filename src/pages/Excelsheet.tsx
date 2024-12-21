@@ -34,21 +34,36 @@ export const ExcelSheet = () => {
   const fetchNamesFromFirestore = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "Auth"));
-      const fetchedNames: any[] | ((prevState: never[]) => never[]) = [];
-      const references: ((prevState: never[]) => never[]) | DocumentReference<DocumentData, DocumentData>[] = [];
-
+      const fetchedData: { value: number | string }[][] = [];
+      const references: DocumentReference<DocumentData>[] = [];
+  
       querySnapshot.forEach((doc) => {
         const userName = doc.data().userName;
+        const cellValues = doc.data().values || Array(31).fill(0); // Ensure we have 31 values, default to 0
+        const count = doc.data().count || 0;
+        const percent = doc.data().percent || 0;
+        const total = doc.data().total || 0;
+  
         if (userName) {
-          fetchedNames.push(userName);
           references.push(doc.ref);
+  
+          // Construct row with fetched data
+          const row = [
+            { value: fetchedData.length + 1 }, // ID
+            { value: userName },              // Name
+            ...cellValues.map((val: number) => ({ value: val })), // 31 cells
+            { value: count },
+            { value: percent },
+            { value: total },
+          ];
+          fetchedData.push(row);
         }
       });
-
-      setNames(fetchedNames);
+  
+      setData(fetchedData);
       setDocRefs(references);
     } catch (error) {
-      console.error("Error fetching userName fields:", error);
+      console.error("Error fetching data from Firestore:", error);
     }
   };
 
